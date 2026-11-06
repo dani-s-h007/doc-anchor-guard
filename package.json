@@ -1,0 +1,46 @@
+{
+  "name": "doc-anchor-guard",
+  "version": "1.0.0",
+  "description": "Deep Markdown heading anchor, cross-file relative link, and asset integrity validator.",
+  "type": "module",
+  "main": "src/validator.js",
+  "types": "index.d.ts",
+  "bin": {
+    "doc-anchor-guard": "bin/cli.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node demo/run-demo.js",
+    "start": "node bin/cli.js"
+  },
+  "keywords": [
+    "markdown",
+    "linter",
+    "link-checker",
+    "heading-anchors",
+    "documentation",
+    "ci",
+    "slugger",
+    "cli"
+  ],
+  "author": "dani-s-h007 <shanusathar@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dani-s-h007/doc-anchor-guard.git"
+  },
+  "homepage": "https://github.com/dani-s-h007/doc-anchor-guard#readme",
+  "bugs": {
+    "url": "https://github.com/dani-s-h007/doc-anchor-guard/issues"
+  }
+}
