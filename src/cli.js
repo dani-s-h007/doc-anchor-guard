@@ -43,24 +43,24 @@ export async function runCli(argv = process.argv.slice(2)) {
     return 0;
   }
 
-  console.log('\n📖 doc-anchor-guard - Markdown Anchor & Link Integrity Scanner');
+  console.log('\ndoc-anchor-guard - Markdown Anchor & Link Integrity Scanner');
   console.log('========================================================================');
   console.log(`Scanned Markdown Files: ${report.scannedFiles}`);
   console.log(`Internal Links Checked: ${report.totalLinksChecked}`);
   console.log(`Broken Links / Anchors: ${report.errors.length}\n`);
 
   if (report.errors.length === 0) {
-    console.log('✅ All internal links, anchors, and images are 100% valid!');
+    console.log('[OK] All internal links, anchors, and images are 100% valid!');
     console.log('========================================================================\n');
     return 0;
   }
 
   for (const err of report.errors) {
-    console.log(`❌ ${err.file}:${err.line}`);
+    console.log(`[FAIL] ${err.file}:${err.line}`);
     console.log(`   Link:   [${err.linkText}](${err.target})`);
     console.log(`   Error:  ${err.message}`);
     if (err.suggestion) {
-      console.log(`   👉 Did you mean: ${err.suggestion}?`);
+      console.log(`   -> Did you mean: ${err.suggestion}?`);
     }
     console.log('');
   }

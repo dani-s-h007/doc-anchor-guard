@@ -1,4 +1,4 @@
-# doc-anchor-guard 📖
+# doc-anchor-guard
 
 [![CI](https://github.com/dani-s-h007/doc-anchor-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/dani-s-h007/doc-anchor-guard/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -11,7 +11,7 @@ Documentation rot is ubiquitous in software projects. When a contributor rephras
 
 ---
 
-## ✨ Features
+## Features
 
 - **GitHub Slug Engine**: Perfectly replicates GitHub and GitLab heading anchor slugification (punctuation stripping, Unicode normalization, and duplicate collision suffixes `-1`, `-2`).
 - **Cross-File Resolution**: Validates relative paths between multiple markdown files (`./docs/api.md#endpoints`).
@@ -22,7 +22,7 @@ Documentation rot is ubiquitous in software projects. When a contributor rephras
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ```bash
 # Run on-demand with npx
@@ -34,7 +34,7 @@ npm install -g doc-anchor-guard
 
 ---
 
-## 🛠️ CLI Usage
+## CLI Usage
 
 ### Scan Repository
 ```bash
@@ -55,7 +55,7 @@ doc-anchor-guard --json
 
 ---
 
-## 💻 Programmatic TypeScript API
+## Programmatic TypeScript API
 
 ```typescript
 import { validateMarkdownDocs } from 'doc-anchor-guard';
@@ -71,7 +71,7 @@ if (report.errors.length > 0) {
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 npm test
@@ -79,7 +79,7 @@ npm test
 
 ---
 
-## 📄 License
+## License
 
 MIT © Essentials Toolkit Authors
 

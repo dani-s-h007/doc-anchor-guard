@@ -6,7 +6,7 @@
 import { GitHubSlugger } from '../src/slugger.js';
 import { parseMarkdownDoc } from '../src/parser.js';
 
-console.log('\n🚀 Starting doc-anchor-guard Interactive Demo...\n');
+console.log('\n=== [DEMO] Starting doc-anchor-guard ===\n');
 
 const sampleMarkdown = `
 # Developer Documentation Guide (v2.1)!
@@ -34,10 +34,10 @@ for (const link of doc.links) {
   if (link.href.startsWith('#')) {
     const target = link.href.slice(1);
     const isValid = doc.definedAnchors.includes(target);
-    const badge = isValid ? '✅ VALID' : '❌ BROKEN ANCHOR';
+    const badge = isValid ? '[VALID]' : '[BROKEN]';
     console.log(` • Link [${link.text}](${link.href}) -> ${badge}`);
   }
 }
 
-console.log('\n🎉 Demo completed successfully!\n');
+console.log('\n[SUCCESS] Demo completed successfully.\n');
 
